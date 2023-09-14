@@ -1,13 +1,15 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using QuanLyTourDuLichBE.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -20,7 +22,9 @@ var configuration = builder.Configuration;
 builder.Services.AddDbContext<QLTourDuLichContext>(options =>
     options.UseSqlServer(configuration.GetConnectionString("QlTourDuLichConnectionString")));
 
-//
+//Add Authorization service
+builder.Services.AddAuthorization();
+
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "QuanLyTourDuLich API", Version = "v1" });
@@ -52,12 +56,25 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
-//Add Authentication service
-builder.Services.AddAuthentication()
-    .AddJwtBearer()
-    .AddJwtBearer("LocalAuthIssuer");
-//Add Authorization service
-builder.Services.AddAuthorization();
+// In ConfigureServices method
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+.AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        ValidIssuer = "your-issuer", //or false
+        ValidAudience = "your-audience", //or false
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("your-secret-key"))
+    };
+});
 
 var app = builder.Build();
 //Use CORS middleware

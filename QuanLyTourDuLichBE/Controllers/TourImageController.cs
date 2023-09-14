@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using QuanLyTourDuLichBE.Models;
@@ -7,6 +8,7 @@ namespace QuanLyTourDuLichBE.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize] // Secure Swagger UI with authentication
     public class TourImageController : ControllerBase
     {
         private readonly QLTourDuLichContext _context;
