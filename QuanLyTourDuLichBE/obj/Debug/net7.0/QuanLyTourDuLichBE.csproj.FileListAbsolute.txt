@@ -71,3 +71,4 @@ D:\Learning .NET\QuanLyTourDuLich\QuanLyTourDuLichBE\QuanLyTourDuLichBE\obj\Debu
 D:\Learning .NET\QuanLyTourDuLich\QuanLyTourDuLichBE\QuanLyTourDuLichBE\obj\Debug\net7.0\QuanLyTourDuLichBE.pdb
 D:\Learning .NET\QuanLyTourDuLich\QuanLyTourDuLichBE\QuanLyTourDuLichBE\obj\Debug\net7.0\QuanLyTourDuLichBE.genruntimeconfig.cache
 D:\Learning .NET\QuanLyTourDuLich\QuanLyTourDuLichBE\QuanLyTourDuLichBE\obj\Debug\net7.0\ref\QuanLyTourDuLichBE.dll
+D:\Learning .NET\QuanLyTourDuLich\QuanLyTourDuLichBE\QuanLyTourDuLichBE\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

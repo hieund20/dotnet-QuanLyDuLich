@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "lFqJtCJhSmbvWK8EiLRB/+D0suSxXX6k886adpXvPIZ96Mfuk7OPJo04INYlaEVmLVCZfn9sE6PVduNp4104Wg==",
+  "dgSpecHash": "Pez8F/L5PgX+N8fwu8aDw/q49KyaFIfbNAhjR34SR1mfS8nFH7CNuWh3BxhHRJ96Vsg0or1WmaiTowflRHga7w==",
   "success": true,
   "projectFilePath": "D:\\Learning .NET\\QuanLyTourDuLich\\QuanLyTourDuLichBE\\QuanLyTourDuLichBE\\QuanLyTourDuLichBE.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hieund\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\hieund\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
+    "C:\\Users\\hieund\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.11\\microsoft.aspnetcore.authentication.jwtbearer.7.0.11.nupkg.sha512",
     "C:\\Users\\hieund\\.nuget\\packages\\microsoft.aspnetcore.diagnostics.entityframeworkcore\\7.0.10\\microsoft.aspnetcore.diagnostics.entityframeworkcore.7.0.10.nupkg.sha512",
     "C:\\Users\\hieund\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.10\\microsoft.aspnetcore.openapi.7.0.10.nupkg.sha512",
     "C:\\Users\\hieund\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
